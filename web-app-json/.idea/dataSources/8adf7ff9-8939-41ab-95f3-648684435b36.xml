@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PostgreSQL - web@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+    <database id="1" name="web">
+      <object-id>16496</object-id>
+      <visible>1</visible>
+    </database>
+    <database id="2" name="postgres">
+      <object-id>12373</object-id>
+    </database>
+    <database id="3" name="cars">
+      <object-id>16431</object-id>
+    </database>
+    <schema id="4" parent="1" name="public">
+      <object-id>2200</object-id>
+      <visible>1</visible>
+      <introspection-state-number>707</introspection-state-number>
+      <introspection-timestamp>2016-11-03.09:39:23.879</introspection-timestamp>
+    </schema>
+    <schema id="5" parent="1" name="pg_catalog">
+      <object-id>11</object-id>
+    </schema>
+    <schema id="6" parent="1" name="pg_toast">
+      <object-id>99</object-id>
+    </schema>
+    <schema id="7" parent="1" name="pg_temp_1">
+      <object-id>11816</object-id>
+    </schema>
+    <schema id="8" parent="1" name="pg_toast_temp_1">
+      <object-id>11817</object-id>
+    </schema>
+    <schema id="9" parent="1" name="information_schema">
+      <object-id>12081</object-id>
+    </schema>
+    <sequence id="10" parent="4" name="auto_id_auto_seq">
+      <object-id>16516</object-id>
+      <state-number>650</state-number>
+    </sequence>
+    <sequence id="11" parent="4" name="users_id_user_seq">
+      <object-id>16508</object-id>
+      <state-number>648</state-number>
+    </sequence>
+    <table id="12" parent="4" name="auto">
+      <object-id>16518</object-id>
+      <state-number>707</state-number>
+    </table>
+    <table id="13" parent="4" name="users">
+      <object-id>16510</object-id>
+      <state-number>658</state-number>
+    </table>
+    <column id="14" parent="12" name="id_auto">
+      <state-number>650</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;auto_id_auto_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="15" parent="12" name="model">
+      <state-number>650</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <column id="16" parent="12" name="power">
+      <state-number>707</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <index id="17" parent="12" name="auto_pkey">
+      <object-id>16522</object-id>
+      <columns>id_auto</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="18" parent="12" name="auto_pkey">
+      <object-id>16523</object-id>
+      <columns>id_auto</columns>
+      <underlying-index>auto_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+    <column id="19" parent="13" name="user_id">
+      <state-number>660</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;users_id_user_seq&apos;::regclass)</default-expression>
+    </column>
+    <column id="20" parent="13" name="user_name">
+      <state-number>648</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <column id="21" parent="13" name="account_name">
+      <state-number>656</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar(15)|0</data-type>
+    </column>
+    <column id="22" parent="13" name="hash_code">
+      <state-number>657</state-number>
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="23" parent="13" name="token">
+      <state-number>658</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <index id="24" parent="13" name="users_pkey">
+      <object-id>16514</object-id>
+      <columns>user_id</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="25" parent="13" name="users_pkey">
+      <object-id>16515</object-id>
+      <columns>user_id</columns>
+      <underlying-index>users_pkey</underlying-index>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
